@@ -1,0 +1,322 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --light-grey: #ececec;
+  --yellow: #E2FC91;
+  --purple: #A675F5;
+  --soft-purple: #C5ADED;
+  --blue: #050542;
+  --green: #66E5BF;
+
+  --c-background: var(--light-grey);
+  --c-text: var(--blue);
+  --c-highlight: var(--yellow);
+  --c-highlight-2: var(--soft-purple);
+
+  --font-family: 'Open Sans', sans-serif;
+
+  /* sizing */
+  --grid-1: 100vw / 24;
+  --grid-1-calc: calc(var(--grid-1));
+  
+  --border-radius: 1.1em;
+  --padding: max(1rem, var(--grid-1-calc));
+  --small-padding: max(1rem, calc(var(--grid-1-calc) * 0.5));
+}
+
+body {
+  background: var(--c-background) !important;
+  color: var(--c-text);
+  font-family: var(--font-family);
+}
+
+.theme-default {
+  --c-background: var(--light-grey);
+  --c-text: var(--blue);
+  --c-highlight: var(--yellow);
+  --c-highlight-2: var(--green);
+}
+
+.theme-purple {
+  --c-background: var(--purple);
+  --c-text: var(--light-grey);
+  --c-highlight: var(--yellow);
+  --c-highlight-2: var(--green);
+}
+
+.theme-blue {
+  --c-background: var(--blue);
+  --c-text: var(--light-grey);
+  --c-highlight: var(--yellow);
+  --c-highlight-2: var(--green);
+}
+
+.theme-green {
+  --c-background: var(--green);
+  --c-text: var(--light-grey);
+  --c-highlight: var(--yellow);
+  --c-highlight-2: var(--purple);
+}
+
+/* typography */
+a {
+  font-family: inherit;
+  color: inherit;
+}
+
+/* Typo */
+.font-bold {
+  font-weight: 600;
+}
+
+.font-semibold {
+  font-weight: 550;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+mark {
+  background: var(--c-highlight);
+}
+
+h1, .xlarge-heading {
+  font-size: max(3rem, calc(72 / 60 * var(--grid-1)));
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+h2, .large-heading {
+  font-size: max(2rem, calc(52 / 60 * var(--grid-1)));
+  letter-spacing: -0.06em;
+  line-height: 1.2;
+}
+
+h3, .medium-heading {
+  font-size: max(1.5rem, calc(40 / 60 * var(--grid-1)));
+  letter-spacing: -0.05em;
+  line-height: 1.5;
+}
+
+h4, .small-heading {
+  font-size: max(1.45rem, calc(32 / 60 * var(--grid-1)));
+  letter-spacing: -0.03em;
+  line-height: 1.5;
+}
+
+h5, h6, .xlarge-body {
+  font-size: max(1.25rem, calc(24 / 60 * var(--grid-1)));
+  letter-spacing: -0.04em;
+  line-height: 1.33;
+}
+
+.large-body {
+  font-size: max(1rem, calc(18 / 60 * var(--grid-1)));
+  letter-spacing: -0.04em;
+  line-height: 1.5;
+}
+
+.medium-body {
+  font-size: max(0.875rem, calc(16 / 60 * var(--grid-1)));
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+}
+
+.small-body {
+  font-size: max(0.75rem, calc(14 / 60 * var(--grid-1)));
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+}
+
+.xsmall-body {
+  font-size: 12px;
+  letter-spacing: 0em;
+  line-height: 1;
+}
+
+.caps {
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+/* Spacing */
+.p {
+  font-size: max(1rem, calc(18 / 60 * var(--grid-1)));
+  letter-spacing: -0.03em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  & + p,
+  & + .p {
+    margin-top: 1em;
+  }
+}
+
+p, .p {
+  & + h1, & + h2, & + h3, & + h4, & + h5, & + h6 {
+    margin-top: 0.8em;
+  }
+}
+
+p, .p {
+  & + p,
+  & + .p {
+    margin-top: 1em;
+  }
+}
+
+section {
+  background: var(--c-background);
+  color: var(--c-text);
+  padding-top: 5rem !important; /* reveal.js override: keeps controls visible */
+  padding-bottom: 5rem !important; /* reveal.js override: keeps controls visible */
+}
+
+ul:not([class]), ol:not([class]) {
+  li {
+    & + li {
+      margin-top: 0.5em;
+    }
+  }
+}
+
+
+/* 'code' strings: */
+
+.code-string-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1em;
+}
+
+.code-string {
+  display: inline-block;
+  width: max-content;
+  max-width: 100%;
+  padding: 0.5em 1em;
+  border-radius: var(--border-radius);
+}
+
+.code-string.is-filled {
+  color: var(--c-highlight);
+  background: var(--c-text);
+  border: 0.1em solid var(--c-text);
+}
+
+.code-string.is-outlined {
+  border: 0.1em solid var(--c-text);
+  color: var(--c-text);
+}
+
+.code-string.is-emoji {
+  padding: 0.5em;
+  min-width: 2.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* Pills: */
+.pill {
+  position: fixed;
+  color: var(--c-highlight);
+  background: var(--c-text);
+  padding: 0.5em 1em;
+  border-radius: var(--border-radius);
+  &[data-position="top left"], &[data-position="left top"] {
+    top: var(--padding);
+    left: var(--padding);
+  }
+  &[data-position="bottom left"], &[data-position="left bottom"] {
+    left: var(--padding);
+    bottom: var(--padding);
+  }
+  &[data-position="top right"], &[data-position="right top"] {
+    top: var(--padding);
+    right: var(--padding);
+  }
+  &[data-position="bottom right"], &[data-position="right bottom"] {
+    bottom: var(--padding);
+    right: var(--padding);
+  }
+}
+
+/* Pointer: */
+.pointer {
+  position: absolute;
+  width: max-content;
+  padding: 0.5em 1em;
+  &::before {
+    content: "";
+    position: absolute;
+  
+    left: -0.5em;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-right: 0.5em solid var(--bg);
+    border-top: 0.5em solid transparent;
+    border-bottom: 0.5em solid transparent;
+  }
+  &[data-position*="left"] {
+    &::before {
+      left: unset;
+      right: -0.5em;
+      border-right: none;
+      border-left: 0.5em solid var(--bg);
+      border-top: 0.5em solid transparent;
+      border-bottom: 0.5em solid transparent;
+    }
+  }
+  &[data-position="top left"], &[data-position="left top"] {
+    top: -25%;
+    right: 100%;
+    transform: rotate(40deg);
+    transform-origin: 0 100%;
+  }
+  &[data-position="bottom left"], &[data-position="left bottom"] {
+    right: 100%;
+    bottom: 0;
+    transform: rotate(-40deg);
+
+  }
+  &[data-position="top right"], &[data-position="right top"] {
+    top: 0;
+    left: 100%;
+    transform: rotate(-40deg);
+    transform-origin: 0 0;
+  }
+  &[data-position="bottom right"], &[data-position="right bottom"] {
+    bottom: 0;
+    left: 100%;
+    transform: rotate(40deg);
+
+  }
+}
+
+
+/* reveal things: */
+
+aside.controls {
+  color: var(--c-text);
+}
+
+div.reveal .progress {
+  background-color: color-mix(in srgb, var(--c-text) 50%, transparent 50%);
+  color: var(--c-highlight);
+}
+
