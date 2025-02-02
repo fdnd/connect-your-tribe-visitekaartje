@@ -8,8 +8,8 @@ npm run dev
 
 ## Current Components:
 
-- [Cover.svelte](./deck/slides/Cover.svelte)
-If you want to use the cover component, you need to pass the following data, easiest way is to do it through the [slide-content.js](./deck/slide-content.js) file:
+- [Cover.svelte](./src/lib/deck/slides/Cover.svelte)
+If you want to use the cover component, you need to pass the following data, easiest way is to do it through the [slide-content.js](./src/lib/deck/slide-content.js) file:
 ```js
 export const slideContent = [
   {
@@ -33,8 +33,8 @@ export const slideContent = [
   }
 ];
 ```
-- [PhotoCollage.svelte](./deck/slides/PhotoCollage.svelte)
-If you want to use the photo collage component, you need to pass the following data, easiest way is to do it through the [slide-content.js](./deck/slide-content.js) file:
+- [PhotoCollage.svelte](./src/lib/deck/slides/PhotoCollage.svelte)
+If you want to use the photo collage component, you need to pass the following data, easiest way is to do it through the [slide-content.js](./src/lib/deck/slide-content.js) file:
 ```js
 export const slideContent = [
   {
@@ -65,8 +65,8 @@ export const slideContent = [
   }
 ];
 ```
-- [Planning.svelte](./deck/slides/Planning.svelte)
-If you want to use the planning component, you need to pass the following data, easiest way is to do it through the [slide-content.js](./deck/slide-content.js) file:
+- [Planning.svelte](./src/lib/deck/slides/Planning.svelte)
+If you want to use the planning component, you need to pass the following data, easiest way is to do it through the [slide-content.js](./src/lib/deck/slide-content.js) file:
 ```js
 export const slideContent = [
   {
@@ -90,8 +90,8 @@ export const slideContent = [
   }
 ];
 ```
-- [Quote.svelte](./deck/slides/Quote.svelte)
-If you want to use the quote component, you need to pass the following data, easiest way is to do it through the [slide-content.js](./deck/slide-content.js) file:
+- [Quote.svelte](./src/lib/deck/slides/Quote.svelte)
+If you want to use the quote component, you need to pass the following data, easiest way is to do it through the [slide-content.js](./src/lib/deck/slide-content.js) file:
 ```js
 export const slideContent = [
   {
@@ -110,8 +110,8 @@ export const slideContent = [
   }
 ];
 ```
-- [TextColumns.svelte](./deck/slides/TextColumns.svelte)
-If you want to use the text columns component, you need to pass the following data, easiest way is to do it through the [slide-content.js](./deck/slide-content.js) file:
+- [TextColumns.svelte](./src/lib/deck/slides/TextColumns.svelte)
+If you want to use the text columns component, you need to pass the following data, easiest way is to do it through the [slide-content.js](./src/lib/deck/slide-content.js) file:
 ```js
 export const slideContent = [
   {
