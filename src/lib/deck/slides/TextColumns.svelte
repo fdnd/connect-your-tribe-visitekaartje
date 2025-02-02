@@ -78,16 +78,6 @@
       position: relative;
       background: var(--c-highlight);
       border-radius: var(--border-radius);
-      animation: zoom-in 0.5s 2s ease-in-out forwards;
-    }
-  }
-
-  @keyframes zoom-in {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(1.1);
     }
   }
 </style>
