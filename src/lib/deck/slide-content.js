@@ -35,8 +35,8 @@ export const slideContent = [
     data: {
       customGrid: false,
       objectFit: "cover",
-      gap: true,
-      padding: true,
+      gap: false,
+      padding: false,
       background: false,
       images: [
         {
