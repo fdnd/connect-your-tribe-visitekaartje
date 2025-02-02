@@ -1,4 +1,5 @@
 <script>
+  export let transition = "fade";
   export let data = {
     quote: {
       content: "Quote",
@@ -11,7 +12,7 @@
   };
 </script>
 
-<section class="quote-slide">
+<section class="quote-slide" data-transition={transition}>
   <blockquote class="font-bold {data.quote.classes}">
     {@html data.quote.content}
   </blockquote>
