@@ -9,7 +9,7 @@ export default {
 			assets: 'build',
 			fallback: undefined,
 			precompress: false,
-			strict: true
+			strict: true,
 			paths: {
 				base: 'https://fdnd.github.io/connect-your-tribe-visitekaartje/'
 			}
